@@ -1,0 +1,176 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Number Generator</title>
+  </head>
+  <style>
+    body{
+      margin-top: 200px;
+      margin-left: 450px;
+    }
+    button{
+      size:0cqmax;
+      background-color: antiquewhite;
+      color: maroon;
+      border-color: maroon;
+      font-size: medium;
+    }
+    input{
+      font-size: medium;
+      background-color: antiquewhite;
+      border-color: maroon;
+    }
+    #result.Congratulations {
+            color:darkmagenta; /* Color for the congratulations message */
+            font-size: 16px; /* Font size for the congratulations message */
+            font-weight: bold; /* Make the congratulations message bold */
+        }
+    #result.low {
+            color: rgb(243, 22, 22); /* Color for the congratulations message */
+            font-size: 14px; /* Font size for the congratulations message */
+            font-weight: bold; /* Make the congratulations message bold */
+        }   
+    #result.high {
+            color:rgb(243, 22, 22); /* Color for the congratulations message */
+            font-size: 14px; /* Font size for the congratulations message */
+            font-weight: bold; /* Make the congratulations message bold */
+        } 
+  </style>
+  <body>
+    <div id="game-container">
+      <h1 style="color: maroon;">Number Guessing Game</h1>
+      <p style="text-align: right 10px; color: brown; font-weight: bold;">Try to guess the number from 1 to 5.</p>
+      <div id="result"></div>
+      <div id="input-container">
+          <input type="number" id="guess-input" placeholder="Enter your guess">
+          <button id="guess-button"  onclick="checkGuess()">Guess</button>
+      </div>
+  </div>
+    <script>
+      const secretNumber = Math.floor(Math.random() * 5) + 1;
+      function checkGuess() {
+          const userGuess = parseInt(document.getElementById("guess-input").value);
+          if (userGuess < 1 || userGuess > 5) {
+              document.getElementById("result").innerText = "Please enter a valid number from 1 to 5.";
+          } 
+          else {
+              if (userGuess === secretNumber) {
+                  document.getElementById("result").innerText= "Congratulations!\n You guessed the correct number!";
+                  document.getElementById("result").className= "Congratulations";
+              } else if (userGuess < secretNumber) {
+                  document.getElementById("result").innerText= "Guessed number is low! Try again.";
+                  document.getElementById("result").className= "low";
+              } else {
+                  document.getElementById("result").innerText= "Guessed number is high! Try again.";
+                  document.getElementById("result").className= "high";
+              }
+          }
+      }
+  </script>
+  </body>
+</html>
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Generator</title>
+    <style>
+        body {
+            margin-top: 200px;
+            margin-left: 450px;
+        }
+
+        button {
+            size: 0cqmax;
+            background-color: antiquewhite;
+            color: maroon;
+            border-color: maroon;
+            font-size: medium;
+        }
+
+        input {
+            font-size: medium;
+            background-color: antiquewhite;
+            border-color: maroon;
+        }
+
+        #result.Congratulations {
+            color: darkmagenta;
+            /* Color for the congratulations message */
+            font-size: 16px;
+            /* Font size for the congratulations message */
+            font-weight: bold;
+            /* Make the congratulations message bold */
+        }
+
+        #result.low {
+            color: rgb(243, 22, 22);
+            /* Color for the congratulations message */
+            font-size: 14px;
+            /* Font size for the congratulations message */
+            font-weight: bold;
+            /* Make the congratulations message bold */
+        }
+
+        #result.high {
+            color: rgb(243, 22, 22);
+            /* Color for the congratulations message */
+            font-size: 14px;
+            /* Font size for the congratulations message */
+            font-weight: bold;
+            /* Make the congratulations message bold */
+        }
+        img {
+        max-width: 35%;
+        height: auto;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+<div id="game-container">
+    <h1 style="color: maroon;">Number Guessing Game</h1>
+    <p style="text-align: right 10px; color: brown; font-weight: bold;">Try to guess the number from 1 to 5.</p>
+    <div id="result"></div>
+    <div id="input-container">
+        <input type="number" id="guess-input" placeholder="Enter your guess">
+        <button id="guess-button" onclick="checkGuess()">Guess</button>
+        <button id="reset-button" onclick="resetGame()">Reset</button>
+    </div>
+</div>
+<script>
+    let secretNumber;
+
+    function resetGame() {
+        secretNumber = Math.floor(Math.random() * 5) + 1;
+        document.getElementById("result").innerText = "";
+        document.getElementById("guess-input").value = "";
+    }
+
+    function checkGuess() {
+        const userGuess = parseInt(document.getElementById("guess-input").value);
+        if (userGuess < 1 || userGuess > 5) {
+            document.getElementById("result").innerText = "Please enter a valid number from 1 to 5.";
+        } else {
+            if (userGuess === secretNumber) {
+                document.getElementById("result").innerText = "Congratulations!\n You guessed the correct number!";
+                document.getElementById("result").className = "Congratulations";
+            } else if (userGuess < secretNumber) {
+                document.getElementById("result").innerText = "Guessed number is low! Try again.";
+                document.getElementById("result").className = "low";
+            } else {
+                document.getElementById("result").innerText = "Guessed number is high! Try again.";
+                document.getElementById("result").className = "high";
+            }
+        }
+    }
+
+    // Initialize the secretNumber when the page loads
+    window.onload = resetGame;
+</script>
+<img src="number guessing.png">
+</body>
+</html>

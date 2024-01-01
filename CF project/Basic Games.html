@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Game Center</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        p {
+            color: #0f0f0f;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #090909;
+            margin: 0 20px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #555;
+        }
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+        .game-card {
+            flex: 0 1 40%; 
+            text-align: center;
+        }
+        .game-button {
+            display: block;
+            padding: 19px 24px;
+            font-size: 20px;
+            margin: 10px auto;
+            text-decoration: none;
+            background-color: #181716;
+            color: white;
+            border-radius: 88px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .game-button:hover {
+            background-color: #021804;
+        }
+        .game-image {
+            width: 80%;
+            max-width: 300px; 
+            height: auto;
+            margin-top: 44px;
+        }
+        section {
+            margin-top: 40px;
+        }
+        .contact-person {
+            border: 2px solid #131212;
+            border-radius: 100px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .contact-person h3 {
+            color: #181716;
+            margin-bottom: 10px;
+        }
+        .contact-person p {
+            color: #0c0b0b;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+  <!--For adding games 
+  <div id="home-comtainer">
+    <button class="game-button" onclick="navigateToGame('')"></button>
+  </div>-->
+    <header>
+        <h1>Welcome to the Basic Game Center</h1>
+        
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+       
+    </header>
+    <p>Choose a game to play:</p>
+    <section id="home">
+        <h2>Welcome to Our Game Center!</h2>
+        <p>Experience the thrill of gaming at Basic Game Center. We offer exciting games that cater to all ages. Explore our games and embark on an adventure of entertainment and challenges!</p>
+    </section>
+
+    <div class="game-container">
+        <div class="game-card">
+            <img src="tic tac toe.png" alt="Tic Tac Toe" class="game-image">
+            <a href="tic tac toe.html" class="game-button">Play Tic Tac Toe</a>
+        </div>
+
+        <div class="game-card">
+            <img src="rock paper scissors.jpg" alt="Rock, Paper, Scissors" class="game-image">
+            <a href="Rock Paper Scissor.html" class="game-button">Play Rock, Paper, Scissors</a>
+        </div>
+
+        <div class="game-card">
+            <img src="number guessing.png" alt="Number Guessing" class="game-image">
+            <a href="Number Guesser.html" class="game-button">Play Number Guessing</a>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to the Basic Game Center, where entertainment meets fun!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions, suggestions, or just want to say hello? We'd love to hear from you! Feel free to reach out to our team:</p>
+        
+        <div class="contact-person">
+            <h3>Atqa Asma</h3>
+            <p>CEO</p>
+            <p>Email: <a href="mailto:atqaasma55@gmail.com">atqaasma1234@gmail.com</a></p>
+            <p>Phone: 0542 583236</p>
+        </div>
+        
+        <div class="contact-person">
+            <h3>Manahil Amjad</h3>
+            <p>Customer Support</p>
+            <p>Email: <a href="mailto:manahilamj2828@gmail.com">manahilamj2828@gmail.com</a></p>
+            <p>Phone: 0542 582239</p>
+        </div>
+        
+        <p>Follow us on social media:</p>
+        <p>
+            <a href="https://twitter.com/basicgamecenter" target="_blank">Twitter</a> |
+            <a href="https://facebook.com/basicgamecenter" target="_blank">Facebook</a> |
+            <a href="https://instagram.com/basicgamecenter" target="_blank">Instagram</a>
+        </p>
+    </section>
+
+</body>
+</html>
